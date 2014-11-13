@@ -27,5 +27,6 @@ png(filename = "plot3.png", width = 480, height = 480, units = "px")
 ## 6. Plotting the file.
 g<-ggplot(data_by_type, aes(year, Emissions, color=type))
 g + geom_line()+facet_grid(.~type)+geom_smooth(method="lm",se=FALSE, col="gray")+
-    theme(axis.text.x=element_text(colour="blue", angle=45))
+    theme(axis.text.x=element_text(colour="blue", angle=45))+labs(title="Total Emissions in Baltimore City by source (1999 - 2008)")+
+    labs(y=expression('Total PM'[2.5]*" Emission"))
 dev.off()
