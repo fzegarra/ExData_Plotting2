@@ -15,7 +15,7 @@ SCC <- readRDS("Source_Classification_Code.rds")
 ## 4. Filtering and subsetting the data corresponding to coal combustion-related sources
 ## 4.1 Searching for the rows that contain the"Coal" word from EI.Sector variable. 
 ## The choose for using EI.Sector instead Short.Name was define from the discussion:
-## "Project 2, question 4, how to define coal combustion-related sources" of one of the discussion forums of the course. 
+## "Project 2, question 4, how to define coal combustion-related sources" one of the discussion forums of the course. 
 ## Thanks colleagues, especially Jaganmohan Rao Narayanam for clarify the subject.
 coal_data <- grep("Coal", SCC$EI.Sector, ignore.case=T)
 ## 4.2 Subsetting the rows that were selected from the SCC data
